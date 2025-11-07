@@ -26,17 +26,20 @@ A professional, responsive website for Crest Immigration Law Firm, founded by At
 ## Project Structure
 
 ```
-lawfirm/
+law/
 ├── index.html          # Home page with hero, services, testimonials
 ├── about.html          # About page with firm history and values
 ├── services.html       # Services page with detailed offerings
 ├── contact.html        # Contact page with form and map
+├── thank-you.html      # Form submission confirmation page
 ├── assets/
 │   ├── css/
 │   │   └── style.css   # Complete stylesheet with blue design system
-│   ├── js/
-│   │   └── script.js   # JavaScript for navigation and form handling
-│   └── images/         # Image assets directory
+│   └── js/
+│       └── script.js   # JavaScript for navigation and form handling
+├── images/
+│   ├── law.jpg         # Attorney profile image
+│   └── balancee.jpg    # Office/law imagery
 └── README.md           # This file
 ```
 

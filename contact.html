@@ -108,11 +108,9 @@
                     <!-- FormSubmit integration: messages will be sent to lawsamchambers@email.com (the destination email provided).
                          The first submission will trigger an email verification from FormSubmit. -->
                     <input type="hidden" name="_subject" value="New contact form message - Crest Law">
-                    <!-- Set reply-to so email replies go to the sender's email address field -->
-                    <input type="hidden" name="_replyto" value="email">
-                <!-- Redirect user after successful submit: goes to thank-you.html which will automatically
-                    redirect back to contact.html. Using a local thank-you page avoids needing a full public URL. -->
-                <input type="hidden" name="_next" value="thank-you.html">
+                    <!-- Redirect user after successful submit: goes to thank-you.html which will automatically
+                         redirect back to contact.html. Using a local thank-you page avoids needing a full public URL. -->
+                    <input type="hidden" name="_next" value="thank-you.html">
                     <!-- Disable FormSubmit captcha if desired (check their docs) -->
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-row">
