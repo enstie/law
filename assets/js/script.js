@@ -29,19 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Contact Form Validation and Handling
-const contactForm = document.querySelector('.contact-form form');
+const contactForm = document.querySelector('form.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         // Get form values
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
         const message = document.getElementById('message').value.trim();
         
         // Simple validation
         if (name === '' || email === '' || message === '') {
+            e.preventDefault();
             alert('Please fill in all required fields (Name, Email, and Message).');
             return;
         }
@@ -49,15 +47,13 @@ if (contactForm) {
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email address.');
             return;
         }
         
-        // If validation passes, show success message
-        alert(`Thank you, ${name}! Your message has been received. We will contact you shortly at ${email}.`);
-        
-        // Reset form
-        contactForm.reset();
+        // If validation passes, allow form to submit to FormSubmit
+        // (no preventDefault, no alert, form will submit naturally)
     });
 }
 
